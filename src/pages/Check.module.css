@@ -1,0 +1,179 @@
+.page { padding: 56px 0 80px; }
+
+.header { text-align: center; margin-bottom: 36px; }
+.header h1 { font-size: clamp(26px, 5vw, 40px); letter-spacing: -0.8px; margin-bottom: 12px; }
+.header p  { font-size: 15px; color: var(--muted); }
+.header code {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.searchBox {
+  display: flex;
+  gap: 10px;
+  max-width: 580px;
+  margin: 0 auto 28px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 18px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 15px;
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.searchInput:focus { border-color: var(--red); }
+.searchInput::placeholder { color: var(--subtle); }
+
+.searchBtn {
+  padding: 14px 26px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.searchBtn:hover:not(:disabled) { background: var(--red-dark); transform: translateY(-1px); }
+.searchBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.errorMsg {
+  text-align: center;
+  color: var(--red);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* ── Result card ── */
+.resultCard {
+  max-width: 580px;
+  margin: 0 auto 32px;
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.resultHeader {
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.resultLabel { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+.resultQuery { font-family: var(--font-head); font-size: 18px; font-weight: 700; word-break: break-all; }
+
+.safeMsg {
+  padding: 20px 24px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.warningNote {
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--line);
+  background: var(--red-light);
+  color: var(--red-dark);
+}
+
+.reportsList { padding: 16px 24px; display: flex; flex-direction: column; gap: 12px; }
+
+.reportItem {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.reportTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.scamTypeBadge {
+  background: var(--red-light);
+  color: var(--red-dark);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.reportDate { font-size: 12px; color: var(--subtle); }
+.reportDesc { font-size: 13px; color: var(--ink-3); margin-bottom: 6px; line-height: 1.55; }
+.reportBy   { font-size: 12px; color: var(--subtle); }
+
+.resultFooter {
+  padding: 16px 24px;
+  border-top: 1px solid var(--line);
+}
+
+.reportBtn {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.reportBtn:hover { background: var(--line); }
+
+/* ── Tips box ── */
+.tipsBox {
+  max-width: 580px;
+  margin: 0 auto;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+
+.tipsBox h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+
+.tipsBox ul {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tipsBox li { font-size: 13px; color: var(--ink-3); line-height: 1.55; }

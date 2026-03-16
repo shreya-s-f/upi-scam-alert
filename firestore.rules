@@ -1,0 +1,28 @@
+// firestore.rules
+// Paste this in Firebase Console → Firestore → Rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /reports/{reportId} {
+
+      // Anyone can READ reports (public feed, check page)
+      allow read: if true;
+
+      // Anyone can CREATE a report (no login needed)
+      // Basic validation: must have scamType, and at least upiId or phone
+      allow create: if
+        request.resource.data.keys().hasAll(['scamType', 'createdAt']) &&
+        (
+          (request.resource.data.upiId is string && request.resource.data.upiId.size() > 0) ||
+          (request.resource.data.phone  is string && request.resource.data.phone.size() > 0)
+        ) &&
+        request.resource.data.description.size() <= 500 &&
+        request.resource.data.reporterName.size() <= 40;
+
+      // Nobody can UPDATE or DELETE (immutable reports for integrity)
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,196 @@
+.hero {
+  background: var(--ink-2);
+  padding: 72px 20px 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Subtle noise texture feel */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232,35,42,0.18), transparent);
+  pointer-events: none;
+}
+
+.heroInner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.alertBanner {
+  display: inline-block;
+  background: rgba(232,35,42,0.15);
+  border: 1px solid rgba(232,35,42,0.35);
+  color: #ff8a8e;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+}
+
+.heroTitle {
+  font-size: clamp(44px, 8vw, 76px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.accent { color: var(--red); }
+
+.heroSub {
+  font-size: 17px;
+  color: rgba(255,255,255,0.62);
+  max-width: 480px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+.heroSub strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.btnPrimary {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.15s, transform 0.15s;
+}
+.btnPrimary:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+.btnSecondary {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 400;
+  transition: background 0.15s;
+}
+.btnSecondary:hover { background: rgba(255,255,255,0.14); }
+
+.statsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.stat { text-align: center; }
+
+.statNum {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.statLabel {
+  display: block;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 2px;
+}
+
+.statDivider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* ─── SECTIONS ── */
+.section { padding: 72px 0; }
+
+.sectionTitle {
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.step {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+
+.stepNum {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red);
+  background: var(--red-light);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.step h3 { font-size: 16px; margin-bottom: 8px; }
+.step p  { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+.scamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.scamCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  transition: box-shadow 0.15s;
+}
+.scamCard:hover { box-shadow: var(--shadow); }
+
+.scamIcon { font-size: 26px; display: block; margin-bottom: 10px; }
+.scamCard h4 { font-size: 14px; margin-bottom: 6px; font-weight: 600; }
+.scamCard p  { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+.ctaBanner {
+  background: var(--red);
+  padding: 64px 20px;
+}
+
+.ctaWhiteBtn {
+  display: inline-block;
+  background: var(--white);
+  color: var(--red);
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.15s;
+}
+.ctaWhiteBtn:hover { transform: translateY(-2px); }
