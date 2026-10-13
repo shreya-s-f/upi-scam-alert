@@ -10,8 +10,11 @@
 
 ---
 
-## 🚀 Live Demo
-> **[your-app.vercel.app](https://your-app.vercel.app)**  ← replace after deployment
+> ## 🚀 Live Demo
+
+**[Try UPI Guard — UPI Scam Alert](https://upi-scam-alert.vercel.app)**
+
+Check reported UPI IDs and phone numbers, explore community scam reports, and submit scam reports.
 
 ---
 
@@ -151,16 +154,11 @@ git push -u origin main
 
 ---
 
-### Step 7 — Deploy to Vercel
+## 🚀 Live Demo
 
-1. Go to **[vercel.com](https://vercel.com)** → Sign up with GitHub
-2. Click **"Add New Project"** → Import your `upi-scam-alert` repo
-3. Framework preset: **Vite** (auto-detected)
-4. Click **Deploy** — done in ~60 seconds ✅
+**[Try UPI Guard — UPI Scam Alert](https://upi-scam-alert.vercel.app)**
 
-Your app is now live at `https://upi-scam-alert.vercel.app` 🚀
-
----
+Check reported UPI IDs and phone numbers, explore community scam reports, and submit scam reports.
 
 ## 🔒 Security Notes
 
@@ -171,14 +169,6 @@ Your app is now live at `https://upi-scam-alert.vercel.app` 🚀
 
 ---
 
-## 📈 Resume Talking Points
-
-- "Built a community-powered fraud detection platform with **X reports submitted**"
-- "Serves **Y monthly users** protecting them from UPI scams"
-- "Full-stack app: React frontend, Firebase Firestore, deployed on Vercel"
-- "Designed Firestore security rules to prevent data tampering"
-
----
 
 ## 🗺️ Future Ideas (v2)
 
