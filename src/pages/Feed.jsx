@@ -28,7 +28,10 @@ function formatDate(ts) {
 
 function maskUPI(upi) {
   if (!upi) return ''
-  const [name, bank] = upi.split('@')
+  const atIndex = upi.indexOf('@')
+  if (atIndex === -1 || upi.indexOf('@', atIndex + 1) !== -1) return upi
+  const name = upi.slice(0, atIndex)
+  const bank = upi.slice(atIndex + 1)
   if (!name) return upi
   const masked = name.slice(0, 3) + '***' + (name.length > 6 ? name.slice(-2) : '')
   return bank ? `${masked}@${bank}` : masked
