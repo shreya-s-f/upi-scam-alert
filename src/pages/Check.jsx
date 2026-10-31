@@ -18,7 +18,7 @@ export default function Check() {
     setError('')
     setResult(null)
     try {
-      const data = await checkUPI(input)
+      const data = await checkUPI(input.trim())
       setResult(data)
       setSearched(input.trim())
     } catch (err) {
