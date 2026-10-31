@@ -74,7 +74,7 @@ export default function Feed() {
 
         {/* Filter bar */}
         <div className={styles.filterBar}>
-          {ALL_TYPES.slice(0, 6).map(t => (
+          {ALL_TYPES.map(t => (
             <button
               key={t}
               className={`${styles.filterChip} ${filter === t ? styles.active : ''}`}
