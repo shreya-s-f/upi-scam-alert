@@ -120,7 +120,7 @@ export default function Feed() {
                 <div
                   key={r.id}
                   className={styles.card}
-                  style={{ animationDelay: `${i * 0.04}s` }}
+                  style={{ '--animation-delay': `${i * 0.04}s` }}
                 >
                   <div className={styles.cardTop}>
                     <span
