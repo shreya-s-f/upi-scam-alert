@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCqEdmqWdNZo95cfoe7i1IcekKDFSAMRbo",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "upi-scam-alert.firebaseapp.com",
   projectId: "upi-scam-alert",
   storageBucket: "upi-scam-alert.firebasestorage.app",
