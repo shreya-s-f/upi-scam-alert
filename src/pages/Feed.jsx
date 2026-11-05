@@ -51,9 +51,11 @@ export default function Feed() {
   const ALL_TYPES = ['All', ...Object.keys(TYPE_COLORS)]
 
   useEffect(() => {
+    let cancelled = false
     getRecentReports(40)
-      .then(data => { setReports(data); setLoading(false) })
-      .catch(() => { setError('Could not load reports. Check your internet connection.'); setLoading(false) })
+      .then(data => { if (!cancelled) { setReports(data); setLoading(false) } })
+      .catch(() => { if (!cancelled) { setError('Could not load reports. Check your internet connection.'); setLoading(false) } })
+    return () => { cancelled = true }
   }, [])
 
   const filtered = filter === 'All'
